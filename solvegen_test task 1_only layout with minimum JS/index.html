@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="widget, call, name">
+    <meta name="description" content="call info">
+    <title>Solvegen_Test</title>
+    <link href="css/reset.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/ui-lightness/jquery-ui.css"
+          rel="stylesheet" type="text/css"/>
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+
+<header class="ha-head">
+    <section class="ha-head__info">
+        <img src="img/logo.png" alt="logo" class="ha-head-info__logo">
+        <div class="ha-login-data">
+            <p class="ha-login-data__user">
+                Вы вошли как <span>Василий Пупкин (pupkin@mail.com) </span>
+            </p>
+            <span class="ha-login-data__divider">&#160; | &#160; </span>
+            <button class="ha-login-data__exit">Выход</button>
+        </div>
+
+    </section>
+
+    <section class="ha-head__menu">
+        <div class="ha-menu-container">
+            <ul class="ha-menu-nav">
+                <li><a class="ha-menu-nav__item" href="#">Профиль</a></li>
+                <li><a class="ha-menu-nav__item ha-menu-nav__item--active" href="#">Виджеты
+                </a></li>
+                <li><a class="ha-menu-nav__item" href="#">Операторы</a></li>
+                <li><img src="img/statistic.png" alt="statistic image"><a
+                        class="ha-menu-nav__item" href="#">Статистика
+                </a></li>
+            </ul>
+            <div class="ha-menu-timer">
+                <p>100 <span> минут <span
+                        class="ha-menu-nav__item--active">осталось до</span></span>
+                    <span class="ha-menu-nav__item--active">17.04.2014</span></p>
+                <button class="ha-menu-timer__pay">Заплатить</button>
+            </div>
+        </div>
+    </section>
+</header>
+
+<main class="main-content">
+    <section class="widgets">
+        <h1 class="widgets__title">Статистика</h1>
+        <div class="widgets__item ">Все виджеты</div>
+        <div class="widgets__item widgets__item--active">Виджет ххххх</div>
+        <div class="widgets__item">Виджет ххх..<span>&#160; 67</span></div>
+        <div class="widgets__item">Виджет ххххх</div>
+        <div class="widgets__item">Виджет ххххх</div>
+        <div class="widgets__item">Виджет ххх.. <span>&#160; 67</span></div>
+        <div class="widgets__item">Виджет ххх.. <span>&#160; 67</span></div>
+        <div class="widgets__item">Виджет ххххх</div>
+        <div class="widgets__item">Виджет ххххх</div>
+        <div class="widgets__item">Виджет ххх.. <span>&#160; 67</span></div>
+        <div class="widgets__item">Виджет ххххх</div>
+        <div class="widgets__item">Виджет ххххх</div>
+        <div class="widgets__item">Виджет ххх.. <span>&#160; 67</span></div>
+        <div class="widgets__item">Виджет ххх.. <span>&#160; 67</span></div>
+        <div class="widgets__item">Виджет ххххх</div>
+        <div class="widgets__item">Виджет ххххх</div>
+        <div class="widgets__item">Виджет ххх.. <span>&#160;  67</span></div>
+        <div class="widgets__item">Виджет ххххх</div>
+        <div class="widgets__item">Виджет ххххх</div>
+        <div class="widgets__item">Виджет ххх.. <span>&#160; 67</span></div>
+    </section>
+
+    <section class="widget-sorting">
+        <header class="sorting-header">
+            <h2 class="sorting-header__title">Виджет хххxx</h2>
+            <nav id="tabs" class="sorting-header__navigation">
+                <ul class="sorting-menu">
+                    <li class="sorting-menu__item">Входящие</li>
+                    <li class="sorting-menu__item ">Исходящие</li>
+                    <li class="sorting-menu__item">Пропущенные</li>
+                    <li class="sorting-menu__item sorting-menu__item--active">Все
+                    </li>
+                </ul>
+            </nav>
+            <div class="sorting-header__date">
+                <span>c</span>
+                <label class="choose-date" for="datepicker_from">
+                    <img class="choose-date__img" src="img/calendar.png" alt="calendar">
+                    <input id="datepicker_from" class="choose-date__input" type="text"
+                           value="12.02" readonly>
+                </label>
+                <span>по</span>
+                <label class="choose-date" for="datepicker_to">
+                    <img class="choose-date__img" src="img/calendar.png" alt="calendar">
+                    <input id="datepicker_to" class="choose-date__input" type="text" value="19.02"
+                           readonly>
+                </label>
+            </div>
+            <div class="sorting-header__download">
+                <img class="download-img" src="img/download.png" alt="download">
+                <p class="download-text"><a href="#">Скачать</a> статистику</p>
+            </div>
+        </header>
+        <section class="sorting-table">
+            <header class="sorting-table__header">
+                <p data-sort-value="data">дата</p>
+                <p data-sort-value="name">от кого</p>
+                <p data-sort-value="name">кому</p>
+                <p data-sort-value="speak_time">длительность</p>
+            </header>
+            <section class="sorting-table__content">
+                <article class="contact-call-info input-call">
+                    <div class="contact-call-info__item call-date">
+                        <p>12:45 </p>
+                        <p class="data">12 апреля </p>
+                    </div>
+                    <div class="contact-call-info__item call-icon">
+                        <img src="img/man.svg" alt="logo_man">
+                    </div>
+                    <div class="contact-call-info__item call-from">
+                        <p class="call-from__name">Менеджер Петя</p>
+                        <p class="call-from__address">Украина, Киев</p>
+                    </div>
+                    <div class="contact-call-info__item call-status">
+                        <img class="call-status__status" src="img/output_call.svg" alt="call_out">
+                    </div>
+                    <div class="contact-call-info__item call-whom">
+                        <img class="call-whom__img" src="img/s.png" alt="s">
+                        <div>
+                            <p class="call-whom__name">Менеджер Вася</p>
+                            <p class="call-whom__address">Украина, Киев</p>
+                        </div>
+                    </div>
+                    <div class="contact-call-info__item call-time">
+                        <p class="call-time__time speak_time">25:58</p>
+                    </div>
+                    <div class="copy-container">
+                        <img class="call-download__copy" src="img/copy.svg" alt="copy"></div>
+                    <div class="contact-call-info__item call-download">
+
+                        <img class="call-download__play" src="img/play.png" alt="play">
+                        <a href="#" class="call-download__link">Скачать</a>
+                    </div>
+                </article>
+
+                <article class="contact-call-info contact-call-info--grey input-call">
+                    <div class="contact-call-info__item call-date">
+                        <p>12:45 </p>
+                        <p class="data">12 апреля </p>
+                    </div>
+                    <div class="contact-call-info__item call-icon">
+                        <img src="img/telephone.svg" alt="logo_tel">
+                    </div>
+                    <div class="contact-call-info__item call-from">
+                        <p class="call-from__name ">94.158.67.210</p>
+                        <p class="call-from__address">Украина, Киев</p>
+                    </div>
+                    <div class="contact-call-info__item call-status">
+                        <img class="call-status__status" src="img/output_call.svg" alt="call_out">
+                    </div>
+                    <div class="contact-call-info__item call-whom">
+                        <img class="call-whom__img" src="img/s.png" alt="s">
+                        <div>
+                            <p class="call-whom__name name">Менеджер Вася</p>
+                            <p class="call-whom__address">Украина, Киев</p>
+                        </div>
+                    </div>
+                    <div class="contact-call-info__item call-time">
+                        <p class="call-time__time speak_time">25:58</p>
+                    </div>
+                    <div class="copy-container"><img class="call-download__copy"
+                                                     src="img/copy_grey.png" alt="copy">
+                    </div>
+                    <div class="contact-call-info__item call-download"></div>
+                </article>
+
+                <article class="contact-call-info output-call">
+                    <div class="contact-call-info__item call-date">
+                        <p>12:45 </p>
+                        <p class="data">12 апреля </p>
+                    </div>
+                    <div class="contact-call-info__item call-icon">
+                        <img class="call-from__img" src="img/iphone.svg" alt="iphone_logo">
+                    </div>
+                    <div class="contact-call-info__item call-from">
+                        <p class="call-from__name">+38050985645</p>
+                        <p class="call-from__address">Украина, Киев</p>
+                    </div>
+                    <div class="contact-call-info__item call-status">
+                        <img class="call-status__status" src="img/incoming_call.svg"
+                             alt="incoming_out">
+                    </div>
+                    <div class="contact-call-info__item call-whom">
+                        <img class="call-whom__img" src="img/w.png" alt="w">
+                        <div>
+                            <p class="call-whom__name">Менеджер Вася</p>
+                            <p class="call-whom__address">Украина, Киев</p>
+                        </div>
+                    </div>
+                    <div class="contact-call-info__item call-time">
+                        <p class="call-time__time speak_time">25:58</p>
+                    </div>
+                    <div class="copy-container"></div>
+                    <div class="contact-call-info__item call-download">
+                        <img class="call-download__play" src="img/stop.png" alt="play">
+                        <a href="#" class="call-download__link">Скачать</a>
+                    </div>
+                </article>
+                <div class="year-division">
+                    <span class="year-division__text">
+                         2015 год
+                    </span>
+                    <hr class="year-division__line">
+                </div>
+                <article class="contact-call-info input-call">
+                    <div class="contact-call-info__item call-date">
+                        <p>12:45 </p>
+                        <p class="data">12 апреля </p>
+                    </div>
+                    <div class="contact-call-info__item call-icon">
+                        <img class="call-from__img" src="img/man.svg" alt="logo_man">
+                    </div>
+                    <div class="contact-call-info__item call-from">
+                        <p class="call-from__name name">Менеджер Петя</p>
+                        <p class="call-from__address">Украина, Киев</p></div>
+                    <div class="contact-call-info__item call-status">
+                        <img class="call-status__status" src="img/output_call.svg" alt="call_out">
+                    </div>
+                    <div class="contact-call-info__item call-whom">
+                        <img class="call-whom__img" src="img/s.png" alt="s">
+                        <div>
+                            <p class="call-whom__name name">Менеджер Вася</p>
+                            <p class="call-whom__address">Украина, Киев</p>
+                        </div>
+                    </div>
+                    <div class="contact-call-info__item call-time">
+                        <p class="call-time__time speak_time">25:58</p>
+                    </div>
+                    <div class="copy-container"><img class="call-download__copy" src="img/copy.svg"
+                                                     alt="copy">
+                    </div>
+                    <div class="contact-call-info__item call-download">
+
+                        <img class="call-download__play" src="img/play.png" alt="play">
+                        <a href="#" class="call-download__link">Скачать</a>
+                    </div>
+                </article>
+
+            </section>
+            <footer class="footer">
+                <p class="footer__title">Страница:</p>
+                <ul class="footer-page">
+                    <li class="footer-page--first">Первая</li>
+                    <li class="footer-page--back">Назад</li>
+                    <li class="footer-page-num first footer-page-num--active"><a href="#">1</a></li>
+                    <li class="footer-page-num"><a href="#">2</a></li>
+                    <li class="footer-page-num "><a class="click" href="#">3</a></li>
+                    <li class="footer-page-num"><a href="#">4</a></li>
+                    <li class="footer-page-num"><a href="#">5</a></li>
+                    <li class="footer-page--forward">Вперед</li>
+                    <li class="footer-page-last">Последняя</li>
+                </ul>
+            </footer>
+        </section>
+    </section>
+
+</main>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="scripts/main.js"></script>
+</body>
+</html>
